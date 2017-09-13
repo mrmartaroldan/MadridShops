@@ -21,24 +21,13 @@ class DownloadAllShopsInteractorNSOpImpl: DownloadAllShopsInteractor {
         queue.addOperation {
     
             if let url = URL(string: urlString), let data = NSData(contentsOf: url) as Data? {
-                do {
-                    let jsonObject = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! Dictionary<String, Any>
-                    let result = jsonObject["result"] as! [Dictionary<String, Any>]
                 
-                    let shops = Shops()
-                    for shopJson in result {
-                        let shop = Shop(name: shopJson["name"]! as! String)
-                        shop.address = shopJson["address"]! as! String
-                        
-                        shops.add(shop: shop)
-                    }
-                    
-                    OperationQueue.main.addOperation {
-                        onSuccess(shops)
-                    }
-                } catch {
-                    
+                let shops = parseShops(data: data)
+                
+                OperationQueue.main.addOperation {
+                    onSuccess(shops)
                 }
+                    
             }
         }
     }
