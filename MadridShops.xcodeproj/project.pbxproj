@@ -28,6 +28,7 @@
 		2E77A7061F68388900B6CEA1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2E77A7051F68388900B6CEA1 /* Podfile */; };
 		2E77A7081F685B6A00B6CEA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E77A7071F685B6A00B6CEA1 /* MainViewController.swift */; };
 		2E77A70A1F6870C200B6CEA1 /* DownloadAllShopsInteractorNSOpImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E77A7091F6870C200B6CEA1 /* DownloadAllShopsInteractorNSOpImpl.swift */; };
+		2EE70CD81F6A6FAF0019FCD3 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE70CD71F6A6FAF0019FCD3 /* String+Image.swift */; };
 		91FE0227583F7F0764ABC0B9 /* Pods_MadridShopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08913A6189155ACE33108B9 /* Pods_MadridShopsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		2E77A7051F68388900B6CEA1 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2E77A7071F685B6A00B6CEA1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2E77A7091F6870C200B6CEA1 /* DownloadAllShopsInteractorNSOpImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorNSOpImpl.swift; sourceTree = "<group>"; };
+		2EE70CD71F6A6FAF0019FCD3 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
 		4280F60F59FEC83D0675CC96 /* Pods-MadridShopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShopsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BBBAE018471DE66DD98F589 /* Pods_MadridShops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MadridShops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E35E0CE22A2F31EB9BCBAB7 /* Pods-MadridShops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,10 +129,11 @@
 		2E77A6CE1F67CC9000B6CEA1 /* MadridShops */ = {
 			isa = PBXGroup;
 			children = (
+				2EE70CD61F6A6F870019FCD3 /* Util */,
+				2E77A6CF1F67CC9000B6CEA1 /* AppDelegate.swift */,
 				2E77A7001F67D1D600B6CEA1 /* View */,
 				2E77A6FE1F67D18A00B6CEA1 /* Model */,
 				2E77A6FD1F67D16300B6CEA1 /* Controller */,
-				2E77A6CF1F67CC9000B6CEA1 /* AppDelegate.swift */,
 				2E77A6D61F67CC9000B6CEA1 /* Assets.xcassets */,
 				2E77A6DB1F67CC9000B6CEA1 /* Info.plist */,
 			);
@@ -198,6 +201,14 @@
 				B08913A6189155ACE33108B9 /* Pods_MadridShopsTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EE70CD61F6A6F870019FCD3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2EE70CD71F6A6FAF0019FCD3 /* String+Image.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		ED66E52316A4331750D51FBA /* Pods */ = {
@@ -445,6 +456,7 @@
 				2E07F7101F69D4530060DCEF /* ShopDetailViewController.swift in Sources */,
 				2E77A6F21F67D0FC00B6CEA1 /* DownloadAllShopsInteractorFakeImpl.swift in Sources */,
 				2E77A7081F685B6A00B6CEA1 /* MainViewController.swift in Sources */,
+				2EE70CD81F6A6FAF0019FCD3 /* String+Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

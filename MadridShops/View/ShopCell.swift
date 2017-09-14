@@ -18,9 +18,12 @@ class ShopCell: UICollectionViewCell {
     func refresh(shop: Shop){
         self.shop = shop
         
-        //
         self.labelCell.text = shop.name
-        // TODO: image view
+        self.shop?.logo.loadImage(into: imageViewCell)
+        imageViewCell.clipsToBounds = true
+        UIView.animate(withDuration: 1.0){
+            self.imageViewCell.layer.cornerRadius = 30
+        }
     }
     
 }

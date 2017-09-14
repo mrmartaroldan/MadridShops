@@ -91,7 +91,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CgW-v8-ZQy">
-                                                    <rect key="frame" x="-15" y="0.0" width="92" height="55"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="77" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
@@ -100,7 +100,6 @@
                                         <connections>
                                             <outlet property="imageViewCell" destination="CgW-v8-ZQy" id="V8v-vP-W5H"/>
                                             <outlet property="labelCell" destination="Nia-vK-JiG" id="A0o-T5-z7A"/>
-                                            <segue destination="3le-Fw-I5B" kind="show" identifier="ShowShopDetailSegue" id="XJR-yk-jCQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -125,6 +124,7 @@
                     <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="kFm-6E-Ysl"/>
                     <connections>
                         <outlet property="shopsCollectionView" destination="Zb2-mG-Fdh" id="Ga8-12-Zyb"/>
+                        <segue destination="3le-Fw-I5B" kind="show" identifier="ShowShopDetailSegue" id="aqs-OR-vMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
