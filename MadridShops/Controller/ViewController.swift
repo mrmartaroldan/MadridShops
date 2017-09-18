@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     var shops: Shops?
-
+    var context: NSManagedObjectContext!
     
     @IBOutlet weak var shopsCollectionView: UICollectionView!
     
@@ -40,8 +41,13 @@ class ViewController: UIViewController {
             print("Name: " + shops.get(index: 0).name)
             self.shops = shops
             
-            self.shopsCollectionView.dataSource = self
             self.shopsCollectionView.delegate = self
+            self.shopsCollectionView.dataSource = self
+            
+            let cacheInteractor = SaveAllShopsInteractorImp()
+            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
+                
+            })
         }
     }
     
