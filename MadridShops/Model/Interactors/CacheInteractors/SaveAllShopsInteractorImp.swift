@@ -14,18 +14,7 @@ class SaveAllShopsInteractorImp: SaveAllShopsInteractor {
         for i in 0..<shops.count() {
             let shop = shops.get(index: i)
             
-            // Mapping shop into ShopCD
-            let shopCD = ShopCD(context: context)
-            shopCD.name = shop.name
-            shopCD.address = shop.address
-            shopCD.image = shop.image
-            shopCD.logo = shop.logo
-            /*
-            shopCD.latitude = shop.latitude!
-            shopCD.longitude = shop.longitude!
-            shopCD.desc_en = shop.description
-            shopCD.openingHours = shop.openingHours
-             */
+            let _ = mapShopIntoShopCD(context: context, shop: shop)
         }
         
         do {
@@ -36,7 +25,7 @@ class SaveAllShopsInteractorImp: SaveAllShopsInteractor {
         }
     }
     
-    func execute(shops shops: Shops, context: NSManagedObjectContext, onSuccess: @escaping (Shops) -> Void) {
+    func execute(shops: Shops, context: NSManagedObjectContext, onSuccess: @escaping (Shops) -> Void) {
         execute(shops: shops, context: context, onSuccess: onSuccess, onError: nil)
     }
     

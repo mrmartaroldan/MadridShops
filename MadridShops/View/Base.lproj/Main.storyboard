@@ -104,7 +104,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wb1-KV-WtE">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsCompass="NO" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wb1-KV-WtE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="301.5"/>
                             </mapView>
                         </subviews>
@@ -123,6 +123,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="kFm-6E-Ysl"/>
                     <connections>
+                        <outlet property="map" destination="wb1-KV-WtE" id="0JW-WA-9sq"/>
                         <outlet property="shopsCollectionView" destination="Zb2-mG-Fdh" id="Ga8-12-Zyb"/>
                         <segue destination="3le-Fw-I5B" kind="show" identifier="ShowShopDetailSegue" id="aqs-OR-vMh"/>
                     </connections>
