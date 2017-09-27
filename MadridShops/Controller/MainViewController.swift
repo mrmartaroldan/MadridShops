@@ -14,7 +14,8 @@ class MainViewController: UIViewController {
     
     var context : NSManagedObjectContext!
     var myLoader : WavesLoader?
-    @IBOutlet weak var redRectangle: UIView!
+    
+    @IBOutlet weak var logo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,14 +58,15 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: 2.0) {
             if let v = self.myLoader{
                 let newFrame = CGRect(x: v.frame.origin.x,
-                                      y: v.frame.origin.y + 200,
+                                      y: v.frame.origin.y + 800,
                                       width: v.frame.size.width,
                                       height: v.frame.size.height)
                 v.frame = newFrame
             }
             
-            self.redRectangle.layer.cornerRadius = 15
-            self.redRectangle.backgroundColor = UIColor.clear
+            self.loadImage()
+            //self.redRectangle.layer.cornerRadius = 15
+            //self.redRectangle.backgroundColor = UIColor.clear
         }
     }
     
@@ -80,8 +82,8 @@ class MainViewController: UIViewController {
         }) { (stop: Bool) in
             
             UIView.animate(withDuration: 1.0, animations: {
-                self.redRectangle.layer.cornerRadius = 0
-                self.redRectangle.backgroundColor = UIColor.red
+               //self.redRectangle.layer.cornerRadius = 0
+                //self.redRectangle.backgroundColor = UIColor.red
             })
         }
         
@@ -91,6 +93,25 @@ class MainViewController: UIViewController {
         if segue.identifier == "ShowShopsSegue" {
             let vc = segue.destination as! ViewController
             vc.context = self.context
+        }
+    }
+    
+    func loadImage(){
+        //assert(Thread.current != Thread.main)
+        //print(Thread.current.description)
+        
+        let imageUrl = "https://lh3.googleusercontent.com/D19LI6ofUo46u5Bl_-S_8_dArgDJfrZAfPhVQ6Y4GuMEVBbkLkSqIAR1tvGAH0mm-04=w300"
+        
+        assert(imageUrl.lengthOfBytes(using: String.Encoding.utf8) > 0)
+        
+        if let url = URL(string: imageUrl),
+            let data = NSData(contentsOf: url){
+            let image = UIImage(data: data as Data)
+            
+            DispatchQueue.main.async {
+                self.logo.image = image
+            }
+            
         }
     }
     
