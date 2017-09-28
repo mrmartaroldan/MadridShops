@@ -18,7 +18,7 @@ class ActivityViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let downloadActivitiesInteractor: DownloadAllActivitiesInteractor = DownloadAllActivitiesInteractorFakeImpl()
+        let downloadActivitiesInteractor: DownloadAllActivitiesInteractor = DownloadAllActivitiesInteractorNSOpImpl()
         
         downloadActivitiesInteractor.execute { (activities: Activities) in
             
