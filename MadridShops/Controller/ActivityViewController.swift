@@ -18,7 +18,7 @@ class ActivityViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let downloadActivitiesInteractor: DownloadAllActivitiesInteractor = DownloadAllActivitiesInteractorNSOpImpl()
+        let downloadActivitiesInteractor: DownloadAllActivitiesInteractor = DownloadAllActivitiesInteractorNSURLSessionImpl()
         
         downloadActivitiesInteractor.execute { (activities: Activities) in
             
@@ -28,6 +28,16 @@ class ActivityViewController : UIViewController {
            self.activitiesCollectionView.delegate = self
            self.activitiesCollectionView.dataSource = self
             
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowActivityDetailSegue" {
+            let vc = segue.destination as! ActivityDetailViewController
+            
+            let indexPath = self.activitiesCollectionView.indexPathsForSelectedItems![0]
+            let activity = self.activities?.get(index: indexPath.row)
+            vc.activity = activity
         }
     }
 

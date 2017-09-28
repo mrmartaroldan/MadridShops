@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ShopViewController.swift
 //  MadridShops
 //
 //  Created by Marta Roldán Arellano on 7/9/17.

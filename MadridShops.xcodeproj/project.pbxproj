@@ -26,6 +26,7 @@
 		2E18F04C1F7B949900E3805D /* ActivityViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18F04B1F7B949900E3805D /* ActivityViewController+CollectionViewController.swift */; };
 		2E18F0501F7BB7F400E3805D /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18F04F1F7BB7F400E3805D /* ActivityCell.swift */; };
 		2E18F0541F7BF34100E3805D /* DownloadAllActivitiesInteractorNSOpImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18F0531F7BF34100E3805D /* DownloadAllActivitiesInteractorNSOpImpl.swift */; };
+		2E18F0561F7D365200E3805D /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18F0551F7D365200E3805D /* ActivityDetailViewController.swift */; };
 		2E23FF461F70538C00009B76 /* MapShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23FF451F70538C00009B76 /* MapShops.swift */; };
 		2E23FF481F70615000009B76 /* ExecuteOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23FF471F70615000009B76 /* ExecuteOnceInteractor.swift */; };
 		2E23FF4A1F7061EB00009B76 /* SetExecutedOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23FF491F7061EB00009B76 /* SetExecutedOnceInteractor.swift */; };
@@ -85,6 +86,7 @@
 		2E18F04B1F7B949900E3805D /* ActivityViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
 		2E18F04F1F7BB7F400E3805D /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		2E18F0531F7BF34100E3805D /* DownloadAllActivitiesInteractorNSOpImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllActivitiesInteractorNSOpImpl.swift; sourceTree = "<group>"; };
+		2E18F0551F7D365200E3805D /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		2E23FF451F70538C00009B76 /* MapShops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapShops.swift; sourceTree = "<group>"; };
 		2E23FF471F70615000009B76 /* ExecuteOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractor.swift; sourceTree = "<group>"; };
 		2E23FF491F7061EB00009B76 /* SetExecutedOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractor.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				2E77A7071F685B6A00B6CEA1 /* MainViewController.swift */,
 				2E07F70F1F69D4530060DCEF /* ShopDetailViewController.swift */,
 				2E18F0471F7A76E200E3805D /* ActivityViewController.swift */,
+				2E18F0551F7D365200E3805D /* ActivityDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,7 +262,6 @@
 				2E18F03B1F79608E00E3805D /* Activities.swift */,
 				2E18F03D1F79616E00E3805D /* Activity.swift */,
 				2E23FF441F70534C00009B76 /* Mappers */,
-				2E07F70A1F69C55A0060DCEF /* Json Parser */,
 				2E77A6FF1F67D19A00B6CEA1 /* Interactors */,
 				2E0A28281F6FE63200512D4D /* MadridShops.xcdatamodeld */,
 			);
@@ -313,6 +315,7 @@
 		2EE70CD61F6A6F870019FCD3 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2E07F70A1F69C55A0060DCEF /* Json Parser */,
 				2E0A282B1F6FE7D300512D4D /* CoreDataStack.swift */,
 				2EE70CD71F6A6FAF0019FCD3 /* String+Image.swift */,
 			);
@@ -586,6 +589,7 @@
 				2E77A7081F685B6A00B6CEA1 /* MainViewController.swift in Sources */,
 				2E0A282A1F6FE63200512D4D /* MadridShops.xcdatamodeld in Sources */,
 				2EE70CD81F6A6FAF0019FCD3 /* String+Image.swift in Sources */,
+				2E18F0561F7D365200E3805D /* ActivityDetailViewController.swift in Sources */,
 				2E18F0541F7BF34100E3805D /* DownloadAllActivitiesInteractorNSOpImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

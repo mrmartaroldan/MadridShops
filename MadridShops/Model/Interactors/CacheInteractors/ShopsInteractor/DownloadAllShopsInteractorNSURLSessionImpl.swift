@@ -26,11 +26,11 @@ class DownloadAllShopsInteractorNSURLSessionImpl: DownloadAllShopsInteractor {
                             //Error
                             if let myError = onError {
                                 myError(error!)
-                            }
                         }
                     }
                 }
-                    
+            }
+            
             task.resume()
         }
     }

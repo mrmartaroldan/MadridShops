@@ -22,32 +22,14 @@ class DownloadAllActivitiesInteractorNSOpImpl : DownloadAllActivitiesInteractor 
         queue.addOperation {
             
             if let url = URL(string: urlString), let data = NSData(contentsOf: url) as Data? {
-                do {
-                    let jsonObject = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! Dictionary<String, Any>
-                    let result = jsonObject["result"] as! [Dictionary<String, Any>]
-                    
-                    let activities = Activities()
-                    
-                    for activityJson in result {
-                        let activity = Activity(name: activityJson["name"]! as! String)
-                        activity.address = activityJson["address"] as! String
-                        activity.logo = activityJson["logo_img"] as! String
-                        activities.add(activity: activity)
-                        
-                    }
+
+                let activities = parseActivities(data: data)
                     
                     OperationQueue.main.addOperation {
                         onSuccess(activities)
                     }
-                    
-                } catch {
-                    
-                }
-
             }
-            
         }
-        
     }
     
 }
