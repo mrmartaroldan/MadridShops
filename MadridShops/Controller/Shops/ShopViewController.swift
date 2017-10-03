@@ -11,7 +11,7 @@ import CoreData
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ShopViewController: UIViewController, CLLocationManagerDelegate {
     
     var context: NSManagedObjectContext!
     

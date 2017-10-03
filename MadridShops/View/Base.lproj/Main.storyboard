@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" title="¡MADRID!" id="bxW-6H-rLv">
                         <barButtonItem key="leftBarButtonItem" title="Activities" id="lAd-Nm-Qb6">
                             <connections>
-                                <segue destination="z02-S5-anl" kind="show" id="vyZ-f0-FVU"/>
+                                <segue destination="z02-S5-anl" kind="show" identifier="ShowActivitiesSegue" id="vyZ-f0-FVU"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Shops" id="Ahu-E0-YBx">
@@ -67,7 +67,7 @@
         <!--Shops-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShopViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +182,6 @@
                                         <connections>
                                             <outlet property="activityImageViewCell" destination="had-8D-ZPc" id="djD-ra-TbJ"/>
                                             <outlet property="activityLabelCell" destination="aQG-Hg-VJ6" id="azm-kU-etv"/>
-                                            <segue destination="pHm-Lj-rPq" kind="show" identifier="ShowActivityDetailSegue" id="woO-e7-o8O"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -203,6 +202,8 @@
                     </view>
                     <connections>
                         <outlet property="activitiesCollectionView" destination="mhV-sc-bRu" id="Tb8-Pg-2mX"/>
+                        <outlet property="activityMap" destination="TBk-FQ-FOs" id="55a-P6-I6R"/>
+                        <segue destination="pHm-Lj-rPq" kind="show" identifier="ShowActivityDetailSegue" id="JDV-uV-htH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOc-Pu-Gvo" userLabel="First Responder" sceneMemberID="firstResponder"/>

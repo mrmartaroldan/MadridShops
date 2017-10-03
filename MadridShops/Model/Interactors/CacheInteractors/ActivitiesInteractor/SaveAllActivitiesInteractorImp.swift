@@ -14,7 +14,7 @@ class SaveAllActivitiesInteractorImp: SaveAllActivitiesInteractor {
         for i in 0..<activities.count() {
             let activity = activities.get(index: i)
             
-            //let _ = mapActivityIntoActivityCD(context: context, activity: activity)
+            let _ = mapActivityIntoActivityCD(context: context, activity: activity)
         }
         
         do {

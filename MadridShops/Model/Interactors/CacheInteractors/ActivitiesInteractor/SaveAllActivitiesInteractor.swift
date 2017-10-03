@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 protocol SaveAllActivitiesInteractor {
-    // execute: downloads all shops. Return on the main thread
+    // execute: saves all shops. Return on the main thread
     func execute(activities: Activities, context: NSManagedObjectContext, onSuccess: @escaping (Activities) -> Void, onError: errorClosure)
     func execute(activities: Activities, context: NSManagedObjectContext, onSuccess: @escaping (Activities) -> Void)
 }

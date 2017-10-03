@@ -1,17 +1,16 @@
 //
-//  ViewController+CollectionViewController.swift
+//  ActivityViewController+CollectionViewController.swift
 //  MadridShops
 //
-//  Created by Marta Roldán Arellano on 11/9/17.
+//  Created by Marta Roldán Arellano on 27/9/17.
 //  Copyright © 2017 Marta Roldán Arellano. All rights reserved.
 //
 
 import UIKit
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+extension ActivityViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-         return fetchedResultsController.sections?.count ?? 0
+        return fetchedResultsController.sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -20,16 +19,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ShopCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCell", for: indexPath) as! ShopCell
         
-        let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
+        let cell : ActivityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCell", for: indexPath) as! ActivityCell
         
-        cell.refresh(shop: mapShopCDIntoShop(shopCD: shopCD))
+        let activity : ActivityCD = fetchedResultsController.object(at: indexPath)
+        
+        cell.refresh(activity: mapActivityCDIntoActivity(activityCD: activity))
         
         return cell
     }
     
     
-    
-    
 }
+    
+
