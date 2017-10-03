@@ -27,9 +27,9 @@ class ActivityViewController : UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
-        ExecuteOnceInteractorImpl().execute {
+        /*ExecuteOnceInteractorImpl().execute {
            initializeData()
-        }
+        }*/
         
         self.activitiesCollectionView.delegate = self
         self.activitiesCollectionView.dataSource = self

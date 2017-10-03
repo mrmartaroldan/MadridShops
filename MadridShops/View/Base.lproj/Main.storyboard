@@ -34,8 +34,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTs-Kk-XJt">
-                                <rect key="frame" x="106" y="116" width="218" height="197"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="k0B-0A-Rey">
+                                <rect key="frame" x="200" y="581" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MadridLogo.png" highlightedImage="MadridLogo.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTs-Kk-XJt">
+                                <rect key="frame" x="-1" y="108" width="417" height="396"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -57,6 +63,9 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="goToActivity" destination="lAd-Nm-Qb6" id="li0-e2-9SO"/>
+                        <outlet property="goToShop" destination="Ahu-E0-YBx" id="DXV-HY-nkx"/>
+                        <outlet property="loadIndicator" destination="k0B-0A-Rey" id="LrM-oz-cJr"/>
                         <outlet property="logo" destination="MTs-Kk-XJt" id="Hg9-Kn-vLL"/>
                     </connections>
                 </viewController>
@@ -277,4 +286,7 @@
             <point key="canvasLocation" x="605.60000000000002" y="80.50974512743629"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MadridLogo.png" width="880" height="655"/>
+    </resources>
 </document>

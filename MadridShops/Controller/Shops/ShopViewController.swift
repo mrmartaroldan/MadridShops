@@ -28,9 +28,9 @@ class ShopViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
-        ExecuteOnceInteractorImpl().execute {
+        /*ExecuteOnceInteractorImpl().execute {
             initializeData()
-        }
+        }*/
         
         self.shopsCollectionView.delegate = self
         self.shopsCollectionView.dataSource = self

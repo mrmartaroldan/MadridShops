@@ -15,10 +15,33 @@ class MainViewController: UIViewController {
     var context : NSManagedObjectContext!
     
     @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var goToShop: UIBarButtonItem!
+    @IBOutlet weak var goToActivity: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadIndicator.isHidden = true
+        
+        ExecuteOnceInteractorImpl().execute {
+            goToShop.isEnabled = false
+            goToActivity.isEnabled = false
+            self.loadIndicator.isHidden = false
+            self.loadIndicator.startAnimating()
+            let queue = OperationQueue()
+            queue.addOperation {
+                var statusConnection = Reachability.isConnectedToNetwork()
+                while (statusConnection == false){
+                        let alert = UIAlertController(title: "Without connection", message: "Check your connection", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.destructive, handler: { action in statusConnection = Reachability.isConnectedToNetwork() }))
+                        self.present(alert, animated: true, completion: nil)
+                }
+                
+                OperationQueue.main.addOperation {
+                    self.loadData()
+                }
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,22 +56,28 @@ class MainViewController: UIViewController {
         }
     }
     
-    func loadImage(){
-        
-        let imageUrl = "https://lh3.googleusercontent.com/D19LI6ofUo46u5Bl_-S_8_dArgDJfrZAfPhVQ6Y4GuMEVBbkLkSqIAR1tvGAH0mm-04=w300"
-        
-        assert(imageUrl.lengthOfBytes(using: String.Encoding.utf8) > 0)
-        
-        if let url = URL(string: imageUrl),
-            let data = NSData(contentsOf: url){
-            let image = UIImage(data: data as Data)
+    func loadData(){
+        let downloadShopsInteractor: DownloadAllShopsInteractor = DownloadAllShopsInteractorNSURLSessionImpl()
+        downloadShopsInteractor.execute { (shops: Shops) in
             
-            DispatchQueue.main.async {
-                self.logo.image = image
-            }
-            
+            let cacheInteractor = SaveAllShopsInteractorImp()
+            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
+            })
         }
-    }
+            
+        let downloadActivitiesInteractor: DownloadAllActivitiesInteractor = DownloadAllActivitiesInteractorNSURLSessionImpl()
+        downloadActivitiesInteractor.execute { (activities: Activities) in
+                
+            let cacheInteractor = SaveAllActivitiesInteractorImp()
+            cacheInteractor.execute(activities: activities, context: self.context, onSuccess: { (activities: Activities) in
+            })
+        }
+                
+        SetExecutedOnceInteractorImpl().execute()
+        self.goToShop.isEnabled = true
+        self.goToActivity.isEnabled = true
+        self.loadIndicator.stopAnimating()
+        self.loadIndicator.isHidden = true
     
-
+    }
 }

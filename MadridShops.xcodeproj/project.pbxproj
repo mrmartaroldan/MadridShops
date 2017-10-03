@@ -32,6 +32,8 @@
 		2E23FF4A1F7061EB00009B76 /* SetExecutedOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23FF491F7061EB00009B76 /* SetExecutedOnceInteractor.swift */; };
 		2E23FF4C1F7068CB00009B76 /* SetExecutedOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23FF4B1F7068CB00009B76 /* SetExecutedOnceInteractorImpl.swift */; };
 		2E23FF4E1F7069B700009B76 /* ExecuteOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23FF4D1F7069B700009B76 /* ExecuteOnceInteractorImpl.swift */; };
+		2E53F9781F83A7B2008CC0DA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53F9771F83A7B2008CC0DA /* Reachability.swift */; };
+		2E53F97C1F83CC10008CC0DA /* MadridLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E53F97B1F83CC0F008CC0DA /* MadridLogo.png */; };
 		2E77A6D01F67CC9000B6CEA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E77A6CF1F67CC9000B6CEA1 /* AppDelegate.swift */; };
 		2E77A6D21F67CC9000B6CEA1 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E77A6D11F67CC9000B6CEA1 /* ShopViewController.swift */; };
 		2E77A6D51F67CC9000B6CEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E77A6D31F67CC9000B6CEA1 /* Main.storyboard */; };
@@ -92,6 +94,8 @@
 		2E23FF491F7061EB00009B76 /* SetExecutedOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractor.swift; sourceTree = "<group>"; };
 		2E23FF4B1F7068CB00009B76 /* SetExecutedOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractorImpl.swift; sourceTree = "<group>"; };
 		2E23FF4D1F7069B700009B76 /* ExecuteOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractorImpl.swift; sourceTree = "<group>"; };
+		2E53F9771F83A7B2008CC0DA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		2E53F97B1F83CC0F008CC0DA /* MadridLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MadridLogo.png; path = ../../../../../Downloads/MadridLogo.png; sourceTree = "<group>"; };
 		2E77A6CC1F67CC9000B6CEA1 /* MadridShops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridShops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E77A6CF1F67CC9000B6CEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E77A6D11F67CC9000B6CEA1 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +212,22 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
+		2E53F9761F83A746008CC0DA /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				2E53F9771F83A7B2008CC0DA /* Reachability.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		2E53F9791F83C572008CC0DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2E53F97B1F83CC0F008CC0DA /* MadridLogo.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2E77A6C31F67CC9000B6CEA1 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				2E77A6CF1F67CC9000B6CEA1 /* AppDelegate.swift */,
+				2E53F9791F83C572008CC0DA /* Resources */,
 				2EE70CD61F6A6F870019FCD3 /* Util */,
 				2E77A7001F67D1D600B6CEA1 /* View */,
 				2E77A6FE1F67D18A00B6CEA1 /* Model */,
@@ -322,6 +343,7 @@
 		2EE70CD61F6A6F870019FCD3 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2E53F9761F83A746008CC0DA /* Connection */,
 				2E23FF441F70534C00009B76 /* Mappers */,
 				2E07F70A1F69C55A0060DCEF /* Json Parser */,
 				2E0A282B1F6FE7D300512D4D /* CoreDataStack.swift */,
@@ -435,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E53F97C1F83CC10008CC0DA /* MadridLogo.png in Resources */,
 				2E77A6DA1F67CC9000B6CEA1 /* LaunchScreen.storyboard in Resources */,
 				2E77A6D71F67CC9000B6CEA1 /* Assets.xcassets in Resources */,
 				2E77A7061F68388900B6CEA1 /* Podfile in Resources */,
@@ -599,6 +622,7 @@
 				2EE70CD81F6A6FAF0019FCD3 /* String+Image.swift in Sources */,
 				2E18F0561F7D365200E3805D /* ActivityDetailViewController.swift in Sources */,
 				2E18F0541F7BF34100E3805D /* DownloadAllActivitiesInteractorNSOpImpl.swift in Sources */,
+				2E53F9781F83A7B2008CC0DA /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
