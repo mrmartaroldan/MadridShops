@@ -20,7 +20,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MadridShops/Controller/MainViewController.swift"
-            timestampString = "528807619.168749"
+            timestampString = "528810250.084397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MadridShops/Controller/Shops/ShopViewController.swift"
-            timestampString = "528807619.16931"
+            timestampString = "528810250.084906"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "addPinLocation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MadridShops/Controller/Shops/ShopViewController.swift"
-            timestampString = "528807619.170173"
+            timestampString = "528810250.085261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "addPinLocation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MadridShops/Controller/Shops/ShopViewController.swift"
-            timestampString = "528807619.170551"
+            timestampString = "528810250.08538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "addPinLocation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MadridShops/Controller/Shops/ShopViewController.swift"
-            timestampString = "528807619.170958"
+            timestampString = "528810250.085497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

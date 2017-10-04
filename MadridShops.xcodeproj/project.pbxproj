@@ -55,6 +55,7 @@
 		2E8317C51F7013F5002317A6 /* SaveAllShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8317C41F7013F5002317A6 /* SaveAllShopsInteractor.swift */; };
 		2E8317C71F7014B6002317A6 /* SaveAllShopsInteractorImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8317C61F7014B6002317A6 /* SaveAllShopsInteractorImp.swift */; };
 		2E8317C81F701E86002317A6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E77A7031F67E9E700B6CEA1 /* MapKit.framework */; };
+		2ED58BD41F85021B005D9439 /* MadridLogo.png in Sources */ = {isa = PBXBuildFile; fileRef = 2E53F97B1F83CC0F008CC0DA /* MadridLogo.png */; };
 		2EE70CD81F6A6FAF0019FCD3 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE70CD71F6A6FAF0019FCD3 /* String+Image.swift */; };
 		91FE0227583F7F0764ABC0B9 /* Pods_MadridShopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08913A6189155ACE33108B9 /* Pods_MadridShopsTests.framework */; };
 /* End PBXBuildFile section */
@@ -222,12 +223,12 @@
 			path = Connection;
 			sourceTree = "<group>";
 		};
-		2E53F9791F83C572008CC0DA /* Resources */ = {
+		2E53F9791F83C572008CC0DA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				2E53F97B1F83CC0F008CC0DA /* MadridLogo.png */,
 			);
-			path = Resources;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		2E53F97D1F84CDB4008CC0DA /* LocationMap */ = {
@@ -263,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				2E77A6CF1F67CC9000B6CEA1 /* AppDelegate.swift */,
-				2E53F9791F83C572008CC0DA /* Resources */,
+				2E53F9791F83C572008CC0DA /* Resource */,
 				2EE70CD61F6A6F870019FCD3 /* Util */,
 				2E77A7001F67D1D600B6CEA1 /* View */,
 				2E77A6FE1F67D18A00B6CEA1 /* Model */,
@@ -595,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED58BD41F85021B005D9439 /* MadridLogo.png in Sources */,
 				2E77A7041F67E9E700B6CEA1 /* MapKit.framework in Sources */,
 				2E18F0461F7A732300E3805D /* DownloadAllActivitiesInteractorFakeImpl.swift in Sources */,
 				2E18F0441F7A55A900E3805D /* MapActivities.swift in Sources */,
