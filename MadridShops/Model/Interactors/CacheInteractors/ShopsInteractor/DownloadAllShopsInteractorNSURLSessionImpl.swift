@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class DownloadAllShopsInteractorNSURLSessionImpl: DownloadAllShopsInteractor {
     func execute(onSuccess: @escaping (Shops) -> Void, onError: errorClosure) {

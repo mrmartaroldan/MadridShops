@@ -27,33 +27,12 @@ class ActivityViewController : UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
-        /*ExecuteOnceInteractorImpl().execute {
-           initializeData()
-        }*/
-        
         self.activitiesCollectionView.delegate = self
         self.activitiesCollectionView.dataSource = self
-        //let madridLocation = CLLocation(latitude:40.4379332, longitude: -3.7495761)
-        //self.activityMap.setCenter(madridLocation.coordinate, animated: true)
-    }
-    
-    func initializeData() {
-        let downloadActivitiesInteractor: DownloadAllActivitiesInteractor = DownloadAllActivitiesInteractorNSURLSessionImpl()
         
-        downloadActivitiesInteractor.execute { (activities: Activities) in
-            
-            let cacheInteractor = SaveAllActivitiesInteractorImp()
-            cacheInteractor.execute(activities: activities, context: self.context, onSuccess: { (activities: Activities) in
-                SetExecutedOnceInteractorImpl().execute()
-                
-                self._fetchedResultsController = nil
-                self.activitiesCollectionView.delegate = self
-                self.activitiesCollectionView.dataSource = self
-                self.activitiesCollectionView.reloadData()
-                
-            })
-        }
+        addPinLocation()
     }
+
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -99,6 +78,21 @@ class ActivityViewController : UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         self.activityMap.setCenter(location.coordinate, animated: true)
+    }
+    
+    func addPinLocation(){
+        
+        let madridLocation = CLLocationCoordinate2DMake(40.41889,-3.69194)
+        activityMap.setRegion(MKCoordinateRegionMakeWithDistance(madridLocation, 1500, 1500), animated: true)
+        
+        for i in 0 ..< self.fetchedResultsController.sections![0].numberOfObjects {
+            let activity: ActivityCD = fetchedResultsController.object(at: IndexPath (row: i, section: 0))
+            let location = CLLocation(latitude: Double(activity.latitude), longitude: Double(activity.longitude))
+            let pinLocation = LocationMap(title: activity.name!, subtitle: activity.address!, coordinate: location.coordinate)
+
+
+            activityMap.addAnnotation(pinLocation)
+        }
     }
 }
 

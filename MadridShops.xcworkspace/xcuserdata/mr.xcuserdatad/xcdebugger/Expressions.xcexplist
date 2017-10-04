@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ShopViewController.addLocations():ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.fetchedResultsController.sections![0].numberOfObjects">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in closure #1 in MainViewController.viewDidLoad():MainViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "MainViewController.prepare(for:sender:):MainViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -19,7 +30,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in MainViewController.loadData():MainViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "ActivityViewController.viewDidLoad():ActivityViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ShopViewController.addPinLocation():ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.fetchedResultsController.sections![0].numberOfObjects">
+            </PersistentString>
+            <PersistentString
+               value = "shop.latitude">
+            </PersistentString>
+            <PersistentString
+               value = "shop.longitude">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

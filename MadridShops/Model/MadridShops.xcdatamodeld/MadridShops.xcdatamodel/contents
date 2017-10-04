@@ -21,7 +21,7 @@
         <attribute name="openingHours" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ShopCD" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="ActivityCD" positionX="-63" positionY="45" width="128" height="165"/>
+        <element name="ShopCD" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>

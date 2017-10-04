@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FillableLoaders
 import CoreData
 
 class MainViewController: UIViewController {
@@ -23,25 +22,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         loadIndicator.isHidden = true
         
-        ExecuteOnceInteractorImpl().execute {
-            goToShop.isEnabled = false
-            goToActivity.isEnabled = false
-            self.loadIndicator.isHidden = false
-            self.loadIndicator.startAnimating()
-            let queue = OperationQueue()
-            queue.addOperation {
-                var statusConnection = Reachability.isConnectedToNetwork()
-                while (statusConnection == false){
-                        let alert = UIAlertController(title: "Without connection", message: "Check your connection", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.destructive, handler: { action in statusConnection = Reachability.isConnectedToNetwork() }))
-                        self.present(alert, animated: true, completion: nil)
-                }
-                
-                OperationQueue.main.addOperation {
-                    self.loadData()
-                }
-            }
-        }
+        checkConnection()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -63,14 +44,17 @@ class MainViewController: UIViewController {
             let cacheInteractor = SaveAllShopsInteractorImp()
             cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
             })
+
         }
             
         let downloadActivitiesInteractor: DownloadAllActivitiesInteractor = DownloadAllActivitiesInteractorNSURLSessionImpl()
         downloadActivitiesInteractor.execute { (activities: Activities) in
-                
+            
+            
             let cacheInteractor = SaveAllActivitiesInteractorImp()
             cacheInteractor.execute(activities: activities, context: self.context, onSuccess: { (activities: Activities) in
             })
+
         }
                 
         SetExecutedOnceInteractorImpl().execute()
@@ -79,5 +63,26 @@ class MainViewController: UIViewController {
         self.loadIndicator.stopAnimating()
         self.loadIndicator.isHidden = true
     
+    }
+    
+    func checkConnection() {
+        ExecuteOnceInteractorImpl().execute {
+            goToShop.isEnabled = false
+            goToActivity.isEnabled = false
+            self.loadIndicator.isHidden = false
+            self.loadIndicator.startAnimating()
+            let queue = OperationQueue()
+            queue.addOperation {
+                var statusConnection = Reachability.isConnectedToNetwork()
+                while (statusConnection == false){
+                    let alert = UIAlertController(title: "Without connection", message: "Check your connection", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.destructive, handler: { action in statusConnection = Reachability.isConnectedToNetwork() }))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                OperationQueue.main.addOperation {
+                    self.loadData()
+                }
+            }
+        }
     }
 }

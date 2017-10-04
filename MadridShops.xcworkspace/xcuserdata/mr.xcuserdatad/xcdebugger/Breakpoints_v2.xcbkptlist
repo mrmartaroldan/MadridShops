@@ -16,77 +16,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MadridShops/Model/Interactors/CacheInteractors/ShopsInteractor/DownloadAllShopsInteractorNSURLSessionImpl.swift"
-            timestampString = "528740227.322988"
+            filePath = "MadridShops/Controller/MainViewController.swift"
+            timestampString = "528807619.168749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "DownloadAllShopsInteractorNSURLSessionImpl"
-            landmarkType = "3">
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "loadData()"
+            landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MadridShops.DownloadAllShopsInteractorNSURLSessionImpl.deinit"
+                  symbolName = "closure #1 (MadridShops.Shops) -&gt; () in MadridShops.MainViewController.loadData() -&gt; ()"
                   moduleName = "MadridShops"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mr/Desktop/Master/MadridShops/MadridShops/Model/Interactors/CacheInteractors/ShopsInteractor/DownloadAllShopsInteractorNSURLSessionImpl.swift"
-                  timestampString = "528737297.486182"
+                  urlString = "file:///Users/mr/Desktop/Master/MadridShops/MadridShops/Controller/MainViewController.swift"
+                  timestampString = "528803435.152228"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "39">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MadridShops.DownloadAllShopsInteractorNSURLSessionImpl.__deallocating_deinit"
+                  symbolName = "closure #1 (MadridShops.Shops) -&gt; () in closure #1 (MadridShops.Shops) -&gt; () in MadridShops.MainViewController.loadData() -&gt; ()"
                   moduleName = "MadridShops"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mr/Desktop/Master/MadridShops/MadridShops/Model/Interactors/CacheInteractors/ShopsInteractor/DownloadAllShopsInteractorNSURLSessionImpl.swift"
-                  timestampString = "528737297.491871"
+                  urlString = "file:///Users/mr/Desktop/Master/MadridShops/MadridShops/Controller/MainViewController.swift"
+                  timestampString = "528803435.156545"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MadridShops.DownloadAllShopsInteractorNSURLSessionImpl.__allocating_init() -&gt; MadridShops.DownloadAllShopsInteractorNSURLSessionImpl"
-                  moduleName = "MadridShops"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mr/Desktop/Master/MadridShops/MadridShops/Model/Interactors/CacheInteractors/ShopsInteractor/DownloadAllShopsInteractorNSURLSessionImpl.swift"
-                  timestampString = "528737297.494963"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MadridShops.DownloadAllShopsInteractorNSURLSessionImpl.init() -&gt; MadridShops.DownloadAllShopsInteractorNSURLSessionImpl"
-                  moduleName = "MadridShops"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mr/Desktop/Master/MadridShops/MadridShops/Model/Interactors/CacheInteractors/ShopsInteractor/DownloadAllShopsInteractorNSURLSessionImpl.swift"
-                  timestampString = "528737297.497649"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "4">
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -94,16 +64,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MadridShops/Model/Interactors/CacheInteractors/ActivitiesInteractor/DownloadAllActivitiesInteractorNSOpImpl.swift"
-            timestampString = "528731689.070773"
+            filePath = "MadridShops/Controller/Shops/ShopViewController.swift"
+            timestampString = "528807619.16931"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "execute(onSuccess:onError:)"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "addPinLocation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -113,13 +83,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MadridShops/Controller/MainViewController.swift"
-            timestampString = "528740227.323331"
+            filePath = "MadridShops/Controller/Shops/ShopViewController.swift"
+            timestampString = "528807619.170173"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "loadData()"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "addPinLocation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MadridShops/Controller/Shops/ShopViewController.swift"
+            timestampString = "528807619.170551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "addPinLocation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MadridShops/Controller/Shops/ShopViewController.swift"
+            timestampString = "528807619.170958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

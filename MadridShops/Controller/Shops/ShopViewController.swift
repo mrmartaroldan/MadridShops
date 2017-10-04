@@ -28,36 +28,11 @@ class ShopViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
-        /*ExecuteOnceInteractorImpl().execute {
-            initializeData()
-        }*/
-        
         self.shopsCollectionView.delegate = self
         self.shopsCollectionView.dataSource = self
         
-        let madridLocation = CLLocation(latitude:40.41889, longitude: -3.69194)
-        self.map.setCenter(madridLocation.coordinate, animated: true)
-    }
-    
-    func initializeData(){
-        let downloadShopsInteractor: DownloadAllShopsInteractor = DownloadAllShopsInteractorNSURLSessionImpl()
+        addPinLocation()
         
-        downloadShopsInteractor.execute { (shops: Shops) in
-            //todo OK
-            print("Name: " + shops.get(index: 0).name)
- 
-            let cacheInteractor = SaveAllShopsInteractorImp()
-            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
-                
-                SetExecutedOnceInteractorImpl().execute()
-                
-                self._fetchedResultsController = nil
-                self.shopsCollectionView.delegate = self
-                self.shopsCollectionView.dataSource = self
-                self.shopsCollectionView.reloadData()
-        
-            })
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -86,22 +61,15 @@ class ShopViewController: UIViewController, CLLocationManagerDelegate {
         
         let fetchRequest: NSFetchRequest<ShopCD> = ShopCD.fetchRequest()
         
-        // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        
-        // Edit the section name key path and cache name if appropriate.
-        // nil for section name key path means "no sections".
         _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,              managedObjectContext: self.context!,
             sectionNameKeyPath: nil, cacheName: "ShopCacheFile")
-            //aFetchedResultsController.delegate = self
         
         do {
             try _fetchedResultsController!.performFetch()
         } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
@@ -114,5 +82,17 @@ class ShopViewController: UIViewController, CLLocationManagerDelegate {
         self.map.setCenter(location.coordinate, animated: true)
     }
     
+    func addPinLocation(){
+        
+        let madridLocation = CLLocationCoordinate2DMake(40.41889,-3.69194)
+        map.setRegion(MKCoordinateRegionMakeWithDistance(madridLocation, 1500, 1500), animated: true)
+        
+        for i in 0 ..< self.fetchedResultsController.sections![0].numberOfObjects {
+            let shop: ShopCD = fetchedResultsController.object(at: IndexPath (row: i, section: 0))
+            let location = CLLocation(latitude: Double(shop.latitude), longitude: Double(shop.longitude))
+            let pinLocation = LocationMap(title: shop.name!, subtitle: shop.address!, coordinate: location.coordinate)
+            map.addAnnotation(pinLocation)
+        }
+    }
 }
 

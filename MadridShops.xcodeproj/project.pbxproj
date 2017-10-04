@@ -34,6 +34,7 @@
 		2E23FF4E1F7069B700009B76 /* ExecuteOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23FF4D1F7069B700009B76 /* ExecuteOnceInteractorImpl.swift */; };
 		2E53F9781F83A7B2008CC0DA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53F9771F83A7B2008CC0DA /* Reachability.swift */; };
 		2E53F97C1F83CC10008CC0DA /* MadridLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E53F97B1F83CC0F008CC0DA /* MadridLogo.png */; };
+		2E53F97F1F84CDCF008CC0DA /* LocationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53F97E1F84CDCF008CC0DA /* LocationMap.swift */; };
 		2E77A6D01F67CC9000B6CEA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E77A6CF1F67CC9000B6CEA1 /* AppDelegate.swift */; };
 		2E77A6D21F67CC9000B6CEA1 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E77A6D11F67CC9000B6CEA1 /* ShopViewController.swift */; };
 		2E77A6D51F67CC9000B6CEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E77A6D31F67CC9000B6CEA1 /* Main.storyboard */; };
@@ -96,6 +97,7 @@
 		2E23FF4D1F7069B700009B76 /* ExecuteOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractorImpl.swift; sourceTree = "<group>"; };
 		2E53F9771F83A7B2008CC0DA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2E53F97B1F83CC0F008CC0DA /* MadridLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MadridLogo.png; path = ../../../../../Downloads/MadridLogo.png; sourceTree = "<group>"; };
+		2E53F97E1F84CDCF008CC0DA /* LocationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMap.swift; sourceTree = "<group>"; };
 		2E77A6CC1F67CC9000B6CEA1 /* MadridShops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridShops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E77A6CF1F67CC9000B6CEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E77A6D11F67CC9000B6CEA1 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		2E53F97D1F84CDB4008CC0DA /* LocationMap */ = {
+			isa = PBXGroup;
+			children = (
+				2E53F97E1F84CDCF008CC0DA /* LocationMap.swift */,
+			);
+			path = LocationMap;
+			sourceTree = "<group>";
+		};
 		2E77A6C31F67CC9000B6CEA1 = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +353,7 @@
 		2EE70CD61F6A6F870019FCD3 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2E53F97D1F84CDB4008CC0DA /* LocationMap */,
 				2E53F9761F83A746008CC0DA /* Connection */,
 				2E23FF441F70534C00009B76 /* Mappers */,
 				2E07F70A1F69C55A0060DCEF /* Json Parser */,
@@ -587,6 +598,7 @@
 				2E77A7041F67E9E700B6CEA1 /* MapKit.framework in Sources */,
 				2E18F0461F7A732300E3805D /* DownloadAllActivitiesInteractorFakeImpl.swift in Sources */,
 				2E18F0441F7A55A900E3805D /* MapActivities.swift in Sources */,
+				2E53F97F1F84CDCF008CC0DA /* LocationMap.swift in Sources */,
 				2E18F0421F7A397F00E3805D /* SaveAllActivitiesInteractor.swift in Sources */,
 				2E23FF461F70538C00009B76 /* MapShops.swift in Sources */,
 				2E23FF481F70615000009B76 /* ExecuteOnceInteractor.swift in Sources */,
